@@ -74,16 +74,16 @@ namespace Primary
 	            Console.ReadLine();
             }
 
-			if (choice == "crawler"){
-				System.Console.WriteLine("Enter URL (with http:// or https://): ");
-				string url = Console.ReadLine();
-				var html = @url;
-				HtmlWeb web = new HtmlWeb();
-				var htmlDoc = web.Load(html);
-				htmlDoc.Save("site.html");
+	    if (choice == "crawler"){
+		System.Console.WriteLine("Enter URL (with http:// or https://): ");
+		string url = Console.ReadLine();
+		var html = @url;
+		HtmlWeb web = new HtmlWeb();
+		var htmlDoc = web.Load(html);
+		htmlDoc.Save("site.html");
                 Console.WriteLine("Press enter to exit.");
-				Console.ReadLine();
-				return;
+		Console.ReadLine();
+		return;
 
             }
 

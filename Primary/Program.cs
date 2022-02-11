@@ -2,6 +2,8 @@
 using Renci.SshNet;
 using System.Net.Http;
 using HtmlAgilityPack;
+using System.IO;
+using System.Text;
 
 namespace Primary
 {
@@ -70,6 +72,17 @@ namespace Primary
 	            System.Console.WriteLine($"The result is: {(double)num1 - num2}");
 	            System.Console.WriteLine("Press Enter to exit.");
 	            Console.ReadLine();
+            }
+
+			if (choice == "crawler")
+            {
+				System.Console.WriteLine("Enter URL (with http:// or https://): ");
+				string url = Console.ReadLine();
+				var html = @url;
+				HtmlWeb web = new HtmlWeb();
+				var htmlDoc = web.Load(html);
+				htmlDoc.Save("site.html");
+
             }
 
             if (choice == "ssh"){

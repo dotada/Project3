@@ -74,8 +74,7 @@ namespace Primary
 	            Console.ReadLine();
             }
 
-			if (choice == "crawler")
-            {
+			if (choice == "crawler"){
 				System.Console.WriteLine("Enter URL (with http:// or https://): ");
 				string url = Console.ReadLine();
 				var html = @url;

@@ -82,6 +82,9 @@ namespace Primary
 				HtmlWeb web = new HtmlWeb();
 				var htmlDoc = web.Load(html);
 				htmlDoc.Save("site.html");
+                Console.WriteLine("Press enter to exit.");
+				Console.ReadLine();
+				return;
 
             }
 

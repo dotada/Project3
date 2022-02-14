@@ -1,5 +1,4 @@
 ﻿using System;
-using Renci.SshNet;
 using System.IO;
 using System.Text;
 
@@ -10,7 +9,7 @@ namespace Primary
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
-            System.Console.WriteLine("Please choose: multiplication, division, addition, subtraction, ssh, crawler, quantum, encryption or decryption.");
+            System.Console.WriteLine("Please choose: multiplication, division, addition, subtraction, ssh, crawler, quantum, encryption, decryption, file encryption or file decryption.");
             string choice = Console.ReadLine();
 			if (choice == "ssh")
             {
@@ -59,6 +58,18 @@ namespace Primary
             {
                 rsa rsa = new rsa();
                 rsa.dec();
+            }
+
+            if (choice == "file encryption")
+            {
+                filenc filenc = new filenc();
+                filenc.fileenc();
+            }
+
+            if (choice == "file decryption")
+            {
+                filenc filenc = new filenc();
+                filenc.filedec();
             }
 
         }

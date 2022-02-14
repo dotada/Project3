@@ -38,6 +38,7 @@ namespace Primary
             Console.WriteLine(decstring);
             Console.WriteLine("");
             Console.WriteLine("Press enter to exit.");
+            Console.ReadLine();
             return;
         }
     }

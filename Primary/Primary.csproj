@@ -12,6 +12,7 @@
     <PackageReference Include="HtmlAgilityPack" Version="1.11.42" />
     <PackageReference Include="Renci.SshNet.Async" Version="1.4.0" />
     <PackageReference Include="SSH.NET" Version="2020.0.1" />
+    <PackageReference Include="StringCipher" Version="1.1.0" />
   </ItemGroup>
 
 </Project>

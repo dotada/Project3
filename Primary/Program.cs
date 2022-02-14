@@ -10,7 +10,7 @@ namespace Primary
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
-            System.Console.WriteLine("Please choose: multiplication, division, addition, subtraction, ssh, crawler or quantum.");
+            System.Console.WriteLine("Please choose: multiplication, division, addition, subtraction, ssh, crawler, quantum, encryption or decryption.");
             string choice = Console.ReadLine();
 			if (choice == "ssh")
             {
@@ -47,6 +47,18 @@ namespace Primary
             {
                 quantum quantumm = new quantum();
                 quantumm.quantumm();
+            }
+
+            if (choice == "encryption")
+            {
+                rsa rsa = new rsa();
+                rsa.enc();
+            }
+
+            if (choice == "decryption")
+            {
+                rsa rsa = new rsa();
+                rsa.dec();
             }
 
         }

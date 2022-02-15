@@ -34,8 +34,9 @@ namespace Primary
             string inputFile = Console.ReadLine();
             Console.WriteLine("Please enter password for encryption: ");
             string password = Console.ReadLine();
+            GCHandle gch = GCHandle.Alloc(password, GCHandleType.Pinned);
             byte[] salt = GenerateRandomSalt();
-            FileStream fsCrypt = new FileStream(inputFile + ".aes", FileMode.Create);
+            FileStream fsCrypt = new FileStream(inputFile + ".dejacrypt", FileMode.Create);
             byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(password);
             RijndaelManaged AES = new RijndaelManaged();
             AES.KeySize = 256;
@@ -67,6 +68,10 @@ namespace Primary
                 cs.Close();
                 fsCrypt.Close();
                 File.Delete(inputFile);
+                ZeroMemory(gch.AddrOfPinnedObject(), password.Length * 2);
+                gch.Free();
+                Console.WriteLine("Press enter to exit.");
+                Console.ReadLine();
             }
 
         }
@@ -79,6 +84,7 @@ namespace Primary
             string outputFile = Console.ReadLine();
             Console.WriteLine("Please enter password for encrypted file: ");
             string password = Console.ReadLine();
+            GCHandle gch = GCHandle.Alloc(password, GCHandleType.Pinned);
             byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(password);
             byte[] salt = new byte[32];
 
@@ -128,6 +134,10 @@ namespace Primary
                 fsOut.Close();
                 fsCrypt.Close();
                 File.Delete(inputFile);
+                ZeroMemory(gch.AddrOfPinnedObject(), password.Length * 2);
+                gch.Free();
+                Console.WriteLine("Press enter to exit.");
+                Console.ReadLine();
             }
 
         }

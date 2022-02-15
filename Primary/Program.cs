@@ -62,14 +62,14 @@ namespace Primary
 
             if (choice == "file encryption")
             {
-                filenc filenc = new filenc();
-                filenc.fileenc();
+                aescrypt aescrypt = new aescrypt();
+                aescrypt.FileEncrypt();
             }
 
             if (choice == "file decryption")
             {
-                filenc filenc = new filenc();
-                filenc.filedec();
+                aescrypt aescrypt = new aescrypt();
+                aescrypt.FileDecrypt();
             }
 
         }

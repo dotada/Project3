@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <PublishTrimmed>true</PublishTrimmed>
     <PublishSingleFile>true</PublishSingleFile>
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
@@ -13,6 +13,8 @@
     <PackageReference Include="Renci.SshNet.Async" Version="1.4.0" />
     <PackageReference Include="SSH.NET" Version="2020.0.1" />
     <PackageReference Include="StringCipher" Version="1.1.0" />
+    <PackageReference Include="VideoLibrary" Version="3.1.9" />
+    <PackageReference Include="YoutubeExplode" Version="6.0.8" />
   </ItemGroup>
 
 </Project>

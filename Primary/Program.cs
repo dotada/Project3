@@ -9,7 +9,7 @@ namespace Primary
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
-            System.Console.WriteLine("Please choose: multiplication, division, addition, subtraction, ssh, crawler, quantum, encryption, decryption, file encryption or file decryption.");
+            System.Console.WriteLine("Please choose: multiplication, division, addition, subtraction, ssh, crawler, quantum, encryption, decryption, file encryption, file decryption or youtube downloader.");
             string choice = Console.ReadLine();
 			if (choice == "ssh")
             {
@@ -70,6 +70,12 @@ namespace Primary
             {
                 aescrypt aescrypt = new aescrypt();
                 aescrypt.FileDecrypt();
+            }
+
+            if (choice == "youtube downloader")
+            {
+                youtube youtube = new youtube();
+                youtube.downloader();
             }
 
         }
